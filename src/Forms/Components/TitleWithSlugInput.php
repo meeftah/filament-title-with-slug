@@ -62,7 +62,7 @@ class TitleWithSlugInput
             ->live(true)
             ->autocomplete(false)
             ->rules($titleRules)
-            ->extraInputAttributes($titleExtraInputAttributes ?? ['class' => 'text-xl font-semibold'])
+            ->extraInputAttributes($titleExtraInputAttributes ?? ['class' => ''])
             ->beforeStateDehydrated(fn (TextInput $component, $state) => $component->state(trim($state)))
             ->afterStateUpdated(
                 function (
