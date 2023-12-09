@@ -50,6 +50,7 @@ class TitleWithSlugInput
         Closure $slugSlugifier = null,
         string|Closure $slugRuleRegex = '/^[a-z0-9\-\_]*$/',
         string|Closure $slugLabelPostfix = null,
+        bool|Closure $inlineLabel = false,
     ): Group {
         $fieldTitle = $fieldTitle ?? config('filament-title-with-slug.field_title');
         $fieldSlug = $fieldSlug ?? config('filament-title-with-slug.field_slug');
@@ -57,6 +58,7 @@ class TitleWithSlugInput
 
         /** Input: "Title" */
         $textInput = TextInput::make($fieldTitle)
+            ->inlineLabel($inlineLabel)
             ->disabled($titleIsReadonly)
             ->autofocus($titleAutofocus)
             ->live(true)
@@ -134,6 +136,7 @@ class TitleWithSlugInput
             ->slugInputSlugLabelPostfix($slugLabelPostfix)
 
             // Default TextInput methods
+            ->inlineLabel($inlineLabel)
             ->readOnly($slugIsReadonly)
             ->live(true)
             ->autocomplete(false)
