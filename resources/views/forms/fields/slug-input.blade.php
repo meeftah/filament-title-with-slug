@@ -120,7 +120,7 @@
                         x-show="!editing"
                         class="
                             cursor-pointer
-                            font-semibold text-gray-400
+                            text-gray-400
                             inline-flex items-center justify-center
                             hover:underline hover:text-primary-500
                             dark:hover:text-primary-400
