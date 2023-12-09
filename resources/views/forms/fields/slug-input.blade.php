@@ -11,21 +11,11 @@
     class="-mt-3 filament-seo-slug-input-wrapper"
 >
 
-<div
-    @class([
-        'grid gap-y-2 sm:grid-cols-3 sm:gap-x-4 sm:items-center' => $hasInlineLabel,
-    ])
-    >
-    <div 
-        @class([
-            'flex items-center justify-between gap-x-3' => $hasInlineLabel,
-        ])
-    ></div>
-    <div 
-        @class([
-            'grid gap-y-2 sm:col-span-2' => $hasInlineLabel,
-        ])
-        >
+@if ($hasInlineLabel())
+<div class="grid gap-y-2 sm:grid-cols-3 sm:gap-x-4 sm:items-center">
+    <div class="flex items-center justify-between gap-x-3"></div>
+    <div class="grid gap-y-2 sm:col-span-2">
+@endif
         <div
             x-data="{
                 context: '{{ $getContext() }}', // edit or create
@@ -261,8 +251,12 @@
 
         </div>
 
+        @if ($hasInlineLabel())
+
     </div>
     
 </div>
+
+@endif
 
 </x-forms::field-wrapper>
