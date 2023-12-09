@@ -120,7 +120,7 @@
                         x-show="!editing"
                         class="
                             cursor-pointer
-                            text-gray-400
+                            font-semibold text-gray-400
                             inline-flex items-center justify-center
                             hover:underline hover:text-primary-500
                             dark:hover:text-primary-400
@@ -186,7 +186,7 @@
                         x-on:click.prevent="submitModification()"
                         style="--c-400:var(--primary-400);--c-500:var(--primary-500);--c-600:var(--primary-600);"
                         class="
-                        fi-btn fi-btn-size-md relative grid-flow-col items-center justify-center font-semibold outline-none transition duration-75 focus:ring-2 disabled:pointer-events-none disabled:opacity-70 rounded-lg fi-btn-color-primary gap-1.5 px-3 py-2 text-sm inline-grid shadow-sm bg-custom-600 text-white hover:bg-custom-500 dark:bg-custom-500 dark:hover:bg-custom-400 focus:ring-custom-500/50 dark:focus:ring-custom-400/50 fi-ac-btn-action
+                        fi-btn fi-btn-size-md relative grid-flow-col items-center justify-center outline-none transition duration-75 focus:ring-2 disabled:pointer-events-none disabled:opacity-70 rounded-lg fi-btn-color-primary gap-1.5 px-3 py-2 text-sm inline-grid shadow-sm bg-custom-600 text-white hover:bg-custom-500 dark:bg-custom-500 dark:hover:bg-custom-400 focus:ring-custom-500/50 dark:focus:ring-custom-400/50 fi-ac-btn-action
                         "
                     >
                         {{ trans('filament-title-with-slug::package.permalink_action_ok') }}
