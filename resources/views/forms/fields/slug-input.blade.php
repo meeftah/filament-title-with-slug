@@ -1,6 +1,5 @@
 <x-filament-forms::field-wrapper.index
     :id="$getId()"
-    :hasInlineLabel="$hasInlineLabel()"
     :label="$getLabel()"
     :label-sr-only="$isLabelHidden()"
     :helper-text="$getHelperText()"
@@ -137,7 +136,7 @@
                         >
                             <span class="mr-1">{{ $getState() }}</span>
 
-                            <i class="heroicon-m-pencil-square h-4 w-4 text-primary-600 dark:text-primary-400"></i>
+                            @svg('heroicon-s-pencil-square', 'h-4 w-4 text-primary-600 dark:text-primary-400')
 
                             <span class="sr-only">{{ trans('filament-title-with-slug::package.permalink_action_edit') }}</span>
 
@@ -214,9 +213,9 @@
                         <x-filament::link
                             x-on:click.prevent="cancelModification()"
                             class="cursor-pointer"
-                            icon="heroicon-o-x-mark"
+                            icon="heroicon-m-x-circle"
                             color="gray"
-                            size="sm"
+                            size="lg"
                             title="{{ trans('filament-title-with-slug::package.permalink_action_cancel') }}"
                         >
                             <span class="sr-only">{{ trans('filament-title-with-slug::package.permalink_action_cancel') }}</span>
